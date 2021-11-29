@@ -1,0 +1,21 @@
+type Player {
+    id: ID!,
+    firstName: String,
+    lastName: String,
+    position: String
+
+}
+
+input PlayerDto {
+    firstName: String!,
+    lastName: String!,
+    position: String!
+}
+
+type Query {
+    getAll:[Player]
+}
+
+type Mutation {
+    add(player:PlayerDto):Player
+}
