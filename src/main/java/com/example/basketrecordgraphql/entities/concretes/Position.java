@@ -1,24 +1,22 @@
 package com.example.basketrecordgraphql.entities.concretes;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "positions")
-@Getter
-@Setter
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Position implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "position_id")
-    private Position position;
+    @OneToMany(mappedBy = "position")
+    private List<Player> players;
 
 }

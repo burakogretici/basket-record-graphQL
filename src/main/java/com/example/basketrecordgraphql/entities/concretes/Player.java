@@ -7,12 +7,14 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+
 
 @Entity
 @Table(name = "players")
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Setter
+@Getter
 public class Player implements Serializable {
 
     @Id
@@ -25,8 +27,11 @@ public class Player implements Serializable {
     @Column(name="last_name")
     private String lastName;
 
-    @OneToMany(mappedBy = "position")
-    private List<Position> positions;
+    @ManyToOne
+    @JoinColumn(name = "position_id")
+    private Position position;
+
+
 
 
 }

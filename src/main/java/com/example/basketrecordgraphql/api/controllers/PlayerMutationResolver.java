@@ -3,7 +3,6 @@ package com.example.basketrecordgraphql.api.controllers;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.example.basketrecordgraphql.business.abstracts.PlayerService;
 import com.example.basketrecordgraphql.entities.concretes.Player;
-import com.example.basketrecordgraphql.entities.dtos.PlayerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,9 +17,11 @@ public class PlayerMutationResolver implements GraphQLMutationResolver {
         super();
         this.playerService=playerService;
     }
-   public Player add(PlayerDto playerDto){
-    return playerService.add(playerDto);
+   public void add(Player player){
+        this.playerService.add(player);
     }
-
+    public void delete(Player player){
+        this.playerService.add(player);
+    }
 
 }

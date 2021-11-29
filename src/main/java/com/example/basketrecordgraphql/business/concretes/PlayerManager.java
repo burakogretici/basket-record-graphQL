@@ -24,19 +24,20 @@ public class PlayerManager implements PlayerService {
     }
 
     @Override
-    public Player add(PlayerDto playerDto) {
-     return this.playerRepository.save(dtoToEntity(playerDto));
+    public void add(Player player) {
+      this.playerRepository.save(player);
     }
 
     @Override
     public void delete(Player player) {
     this.playerRepository.delete(player);
     }
-    private Player dtoToEntity(PlayerDto playerDto){
+
+   /*private Player dtoToEntity(PlayerDto playerDto){
         Player player=new Player();
         player.setFirstName(playerDto.getFirstName());
         player.setLastName(playerDto.getLastName());
         //player.setPosition(playerDto.getPosition());
         return player;
-    }
+    }*/
 }

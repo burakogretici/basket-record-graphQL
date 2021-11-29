@@ -1,0 +1,15 @@
+type Position {
+    id: ID!,
+    position: String
+}
+
+input Position {
+    position: String!
+}
+type Query {
+    getAll:[Position]
+}
+
+type Mutation {
+    add(position:Position):Position
+}

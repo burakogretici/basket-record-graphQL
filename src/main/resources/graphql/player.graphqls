@@ -1,0 +1,23 @@
+type Player {
+    id: ID!
+    firstName: String
+    lastName: String
+    position:Int
+}
+
+input Player {
+    firstName: String!
+    lastName: String!
+    position:Int
+
+}
+
+type Query {
+    getAll(match:String):[Player]
+}
+
+type Mutation {
+    add(player:Player):Player
+
+    delete(player:Player):Player
+}
