@@ -2,11 +2,12 @@ type Player {
     id: ID!
     firstName: String
     lastName:String
-    position:Int
+    position:Position!
 }
 type Position {
     id:ID!
     name:String!
+    players:[Player]!
 }
 
 type PlayerQuery {

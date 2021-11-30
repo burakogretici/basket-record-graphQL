@@ -1,4 +1,4 @@
-/*package com.example.basketrecordgraphql.api.controllers;
+package com.example.basketrecordgraphql.api.controllers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.example.basketrecordgraphql.business.abstracts.PositionService;
@@ -21,4 +21,4 @@ public class PositionMutationResolver  implements GraphQLMutationResolver {
         this.positionService.add(position);
     }
 
-}*/
+}
