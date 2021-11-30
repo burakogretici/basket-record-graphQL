@@ -1,0 +1,16 @@
+type Player {
+    id: ID!
+    firstName: String
+    lastName:String
+    position:Int
+}
+type Position {
+    id:ID!
+    name:String!
+}
+
+type PlayerQuery {
+    getAll:[Player]
+
+
+}

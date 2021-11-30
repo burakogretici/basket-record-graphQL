@@ -6,9 +6,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "positions")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Position implements Serializable {
@@ -16,7 +16,10 @@ public class Position implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(name="name")
+    private String positionName;
+
+
     @OneToMany(mappedBy = "position")
     private List<Player> players;
-
 }

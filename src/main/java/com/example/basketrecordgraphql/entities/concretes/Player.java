@@ -1,20 +1,15 @@
 package com.example.basketrecordgraphql.entities.concretes;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+@Data
 @Entity
 @Table(name = "players")
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
 public class Player implements Serializable {
 
     @Id

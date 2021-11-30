@@ -5,10 +5,10 @@ import lombok.*;
 
 
 @Data
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PlayerDto implements Dto {
-
+    private Integer id;
     private String firstName;
     private String lastName;
     private String position;
