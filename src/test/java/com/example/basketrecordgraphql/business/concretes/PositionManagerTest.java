@@ -1,13 +1,9 @@
 package com.example.basketrecordgraphql.business.concretes;
 
-import com.example.basketrecordgraphql.business.abstracts.PlayerService;
+
 import com.example.basketrecordgraphql.business.abstracts.PositionService;
-import com.example.basketrecordgraphql.dataAccess.abstracts.PlayerRepository;
 import com.example.basketrecordgraphql.dataAccess.abstracts.PositionRepository;
-import com.example.basketrecordgraphql.entities.concretes.Player;
 import com.example.basketrecordgraphql.entities.concretes.Position;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
