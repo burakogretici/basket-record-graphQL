@@ -7,21 +7,21 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 @RequiredArgsConstructor
 public class PlayerMutationResolver implements GraphQLMutationResolver {
     private PlayerService playerService;
 
     @Autowired
-    public PlayerMutationResolver(PlayerService playerService){
-        super();
+    public PlayerMutationResolver (PlayerService playerService){
         this.playerService=playerService;
     }
    public void add(Player player){
         this.playerService.add(player);
     }
     public void delete(Player player){
-        this.playerService.add(player);
+        this.playerService.delete(player);
     }
 
 }

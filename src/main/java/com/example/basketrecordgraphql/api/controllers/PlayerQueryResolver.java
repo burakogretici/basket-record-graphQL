@@ -2,7 +2,6 @@ package com.example.basketrecordgraphql.api.controllers;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.example.basketrecordgraphql.business.abstracts.PlayerService;
-import com.example.basketrecordgraphql.dataAccess.abstracts.PlayerRepository;
 import com.example.basketrecordgraphql.entities.concretes.Player;
 import com.example.basketrecordgraphql.entities.dtos.PlayerDto;
 import lombok.RequiredArgsConstructor;

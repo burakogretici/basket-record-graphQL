@@ -31,6 +31,7 @@ public class PlayerManager implements PlayerService {
     @Override
     public void add(Player player) {
       this.playerRepository.save(player);
+
     }
 
     @Override

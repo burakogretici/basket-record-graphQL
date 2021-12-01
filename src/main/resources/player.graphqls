@@ -4,14 +4,24 @@ type Player {
     lastName:String
     position:Position!
 }
-type Position {
-    id:ID!
-    name:String!
-    players:[Player]!
+type PlayerDto{
+    id: ID!
+    firstName: String
+    lastName:String
+    position:Position!
 }
 
-type PlayerQuery {
+type Query {
     getAll:[Player]
+    getAll:[Position]
 
-
+}
+input player{
+    firstName:String
+    lastName:String
+    position:Int!
+}
+type Mutation{
+    add(Player:player):Player
+    add(position:Position):Position
 }

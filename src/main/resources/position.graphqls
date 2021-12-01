@@ -1,1 +1,8 @@
-t
+type Position {
+    id:ID!
+    name:String!
+    players:[Player]!
+}
+input Position {
+    name: String!
+}
