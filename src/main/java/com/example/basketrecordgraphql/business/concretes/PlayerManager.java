@@ -1,6 +1,7 @@
 package com.example.basketrecordgraphql.business.concretes;
 
 import com.example.basketrecordgraphql.business.abstracts.PlayerService;
+import com.example.basketrecordgraphql.business.conctants.Messages;
 import com.example.basketrecordgraphql.dataAccess.abstracts.PlayerRepository;
 import com.example.basketrecordgraphql.entities.concretes.Player;
 import com.example.basketrecordgraphql.entities.dtos.PlayerDto;
@@ -30,7 +31,11 @@ public class PlayerManager implements PlayerService {
 
     @Override
     public void add(Player player) {
-      this.playerRepository.save(player);
+      if (maximumCapacity(player)){
+       System.out.println(Messages.maximumCapacity);
+      }
+        this.playerRepository.save(player);
+        System.out.println(Messages.playerAdded);
 
     }
 
@@ -39,4 +44,11 @@ public class PlayerManager implements PlayerService {
     this.playerRepository.delete(player);
     }
 
+    private boolean maximumCapacity(Player player){
+       var result=playerRepository.findAll().stream().count();
+       if (result==13){
+           System.out.println(Messages.maximumCapacity);
+       }
+       return true;
+    }
 }

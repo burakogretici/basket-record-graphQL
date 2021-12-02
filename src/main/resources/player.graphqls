@@ -14,6 +14,7 @@ type PlayerDto{
 type Query {
     getAll:[Player]
     getAll:[Position]
+    getPlayerDetails:[PlayerDto]
 
 }
 input player{
@@ -23,5 +24,6 @@ input player{
 }
 type Mutation{
     add(Player:player):Player
+    delete(Player:player):Player
     add(position:Position):Position
 }
